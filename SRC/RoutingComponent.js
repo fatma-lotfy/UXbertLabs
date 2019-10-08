@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack'
 import SplashScreen from './SplashScreen';
 import Main from './Main';
 import APIPage from './APIPage'
+import CartPage from './CartPage'
 
 const navigation = createStackNavigator({
     SplashScreen :{
@@ -25,13 +26,9 @@ const navigation = createStackNavigator({
     },
     APIPage :{
         screen : APIPage,
-        
-        navigationOptions: () => ({
-            headerTintColor:'#547980',
-            // header: null,
-            // headerVisible: false,
-            // headerBackTitle: null
-          })
+    },
+    CartPage :{
+        screen : CartPage,
     },
 
 })

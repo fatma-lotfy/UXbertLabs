@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text ,TextInput, StyleSheet , Dimensions , TouchableOpacity,AsyncStorage} from 'react-native';
+import { View, Text ,TextInput, StyleSheet , Dimensions , TouchableOpacity} from 'react-native';
 import { Icon } from "react-native-elements";
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default class Main extends Component {
   state = {
@@ -8,7 +9,7 @@ export default class Main extends Component {
      isPressed :false,
   }
  
- componentDidMount = () => AsyncStorage.getItem('name').then((value) => this.setState({ 'name': value }))
+ componentDidMount =() => AsyncStorage.getItem('name').then((value) => this.setState({ 'name': value }))
 
  setName = (value) => {
   AsyncStorage.setItem('name', value);
